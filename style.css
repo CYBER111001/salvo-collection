@@ -272,20 +272,24 @@ nav{
 }
     .toast{
     position:fixed;
-    top:20px;
-    right:20px;
-    background:#111;
+    top:25px;
+    right:25px;
+    min-width:300px;
+    padding:16px 22px;
+    background:rgba(30,30,30,.95);
     color:#fff;
-    padding:15px 20px;
-    border-left:5px solid #25D366;
-    border-radius:10px;
-    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    border-left:6px solid #25D366;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    backdrop-filter:blur(10px);
+    font-size:16px;
+    font-weight:600;
     opacity:0;
-    transform:translateX(100%);
-    transition:.4s;
+    transform:translateX(120%);
+    transition:all .45s ease;
     z-index:99999;
-    font-weight:bold;
 }
+
 .toast.show{
     opacity:1;
     transform:translateX(0);
