@@ -2,8 +2,14 @@ let cart = [];
 
 function addToCart(product, price) {
     cart.push({ product, price });
-    alert(product + " added to cart!");
-}
+    const toast = document.getElementById("toast");
+toast.innerHTML = "🛒 " + product + " added to cart!";
+toast.classList.add("show");
+
+setTimeout(() => {
+    toast.classList.remove("show");
+}, 2500);
+
 
 function viewCart() {
     if (cart.length === 0) {
