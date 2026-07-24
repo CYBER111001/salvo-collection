@@ -3,7 +3,14 @@ let cart = [];
 function addToCart(product, price) {
     cart.push({ product, price });
     const toast = document.getElementById("toast");
-toast.innerHTML = "🛒 " + product + " added to cart!";
+toast.innerHTML = `
+<div style="display:flex;align-items:center;gap:12px;">
+    <span style="font-size:26px;">✅</span>
+    <div>
+        <strong>Added to Cart</strong><br>
+        <small>${product} has been added successfully.</small>
+    </div>
+</div>`;
 toast.classList.add("show");
 
 setTimeout(() => {
