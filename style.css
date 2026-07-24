@@ -270,3 +270,23 @@ nav{
     height:32px;
     filter:invert(1);
 }
+    .toast{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#111;
+    color:#fff;
+    padding:15px 20px;
+    border-left:5px solid #25D366;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    opacity:0;
+    transform:translateX(100%);
+    transition:.4s;
+    z-index:99999;
+    font-weight:bold;
+}
+.toast.show{
+    opacity:1;
+    transform:translateX(0);
+}
